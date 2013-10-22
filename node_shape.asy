@@ -93,8 +93,9 @@ node node_roundbox(Label L, pair pos=(0,0), real xmargin=0, real ymargin=xmargin
        mm=mag*(m-(xmargin,ymargin)),
        DD=MM-mm;
   pair lb=mm,rb=(MM.x,mm.y),rt=MM,lt=(mm.x,MM.y);
-  pair d=roundratio*DD;
-  pair dx=(d.x,0), dy=(0,d.y);
+  // Thanks to Xiaoqian Wu, a bug here is fixed when the text is long
+  real d=roundratio*min(DD.x,DD.y);
+  pair dx=(d,0), dy=(0,d);
   nd.outline=lb+dy{S}..{E}lb+dx--rb-dx{E}..{N}rb+dy--rt-dy{N}..{W}rt-dx--lt+dx{W}..{S}lt-dy--cycle;
   drawfn(nd.stuff, nd.outline);
   return nd;
