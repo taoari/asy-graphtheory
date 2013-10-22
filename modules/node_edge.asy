@@ -56,10 +56,15 @@ struct edge{
 };
 
 // draw
-void draw(... edge[] ea)
+void draw(edge[] ea)
 {
   for (edge e: ea)
     e.draw();
+}
+
+void draw(... edge[] ea)
+{
+  draw(ea);
 }
 
 // edges

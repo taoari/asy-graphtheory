@@ -44,4 +44,7 @@ import wt_string;
 // gettextsize, getminipagesize
 // minipage2(string s, real width=100bp, bool smart=true, pair flush=(0,0))
 
+// util functions: bb (boundbox), setpos, circles
+include node_util;
+
 
