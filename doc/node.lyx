@@ -1,0 +1,730 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\date{}
+
+\usepackage{xcolor}
+\usepackage{hyperref}
+\end_preamble
+\options 12pt
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3.17cm
+\topmargin 2.54cm
+\rightmargin 3.17cm
+\bottommargin 2.54cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0bp
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\color green
+Asymptote node.asy Example
+\end_layout
+
+\begin_layout Author
+Tao Wei
+\begin_inset Newline newline
+\end_inset
+
+taowei@buffalo.edu
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+usepackage{xcolor} % required by asy.tex
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+input{asy.tex}  
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=asy, style=lesscolor}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Syntax
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename asy/flowchartdock.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Basic
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "asy/flowchartbasic.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Automatically Calcuating Nodes Position and Style Drawing
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "asy/flowchartauto.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Dock Syntax
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "asy/flowchartdock.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Edge Struct
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "asy/flowchartedge.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Edge Length and Length Between Nodes
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename asy/flowchartrel.pdf
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename asy/flowchartabs.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Edge Length
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "asy/flowchartrel.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Length Between Nodes
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "asy/flowchartabs.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Functionality
+\end_layout
+
+\begin_layout Subsection
+Graph Illustration
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename asy/graphillustra.pdf
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "asy/graphillustra.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Flowchart
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename asy/flowchart.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "asy/flowchart.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Graph Theory
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename asy/graphtheory.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "asy/graphtheory.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Argument
+status collapsed
+
+\begin_layout Plain Layout
+Automata
+\end_layout
+
+\end_inset
+
+Automata
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+This is from AsymptoteByExample by Leoliu
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename asy/automata.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "asy/automata.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Argument
+status collapsed
+
+\begin_layout Plain Layout
+Boxes
+\end_layout
+
+\end_inset
+
+Boxes
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+This is from BoxesForAsymptote by Addylee2004@163.com
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Box Illustration
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename asy/box.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "asy/box.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Box Example
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename asy/boxes.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "asy/boxes.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Circuit
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename asy/circuit.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "asy/circuit.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset Argument
+status collapsed
+
+\begin_layout Plain Layout
+SML
+\end_layout
+
+\end_inset
+
+SML: Simple Modeling Language
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+This is from sml4asy by cuichaox@gmail.com
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Hello SML
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename asy/hellosml.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "asy/hellosml.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Component
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename asy/component.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "asy/component.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+SML Lead
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename asy/smllead.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "asy/smllead.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+SML Class
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename asy/smlclass.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "asy/smlclass.asy"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
