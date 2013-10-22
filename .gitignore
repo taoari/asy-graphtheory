@@ -1,2 +1,4 @@
 *.pdf
 .fuse_*
+
+!doc/node.pdf
