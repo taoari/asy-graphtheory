@@ -30,6 +30,9 @@ Boxes:
 ![boxes](samples/boxes.png)
 [view source](samples/boxes.asy)
 
+![boxes](samples/boxes2.png)
+[view source](samples/boxes2.asy)
+
 Flow Chart:
 -----------
 

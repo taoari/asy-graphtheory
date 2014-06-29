@@ -11,10 +11,10 @@ node cfi=sml_class("CsvFileImp");
 
 // layout
 hlayout(1cm, dbi, cfi);
-vlayout(-2cm, middle(dbi, cfi), storeh);
+vlayout(-2cm, middlen(dbi, cfi), storeh);
 hlayout(2cm, storeh, checkh, comph);
 flush(N, storeh, checkh, comph);
-vlayout(-3cm, middle(storeh, checkh, comph), datah);
+vlayout(-3cm, middlen(storeh, checkh, comph), datah);
 hlayout(-1cm, datah, record);
 flush(W, dbi, record);
 
