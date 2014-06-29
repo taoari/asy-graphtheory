@@ -41,6 +41,14 @@ boundbox bb(node[] nds)
   return bb;
 }
 
+// middle
+node middlen(... node[] nds) {
+    boundbox bb=bb(nds);
+    node nd;
+    nd.pos = (bb.m+bb.M)/2;
+    return nd;
+}
+
 // setpos
 void setpos(node[] nds, pair[] positions) {
   if (nds.length != positions.length)
@@ -103,7 +111,6 @@ void flush(align align ... node[] nds)
 }
 
 // setheight, setwidth, setsize
-
 void setheight(real h=0 ... node[] nds)
 {
     if (h==0 && nds.length<2)
@@ -171,7 +178,6 @@ void setwidth(real width, real[] ratios ... node[] nds) {
 }
 
 // pack
-
 nodestyle defaultpackstyle=nodestyle(drawfn=None);
 real defaultpackskip=0;
 
@@ -194,26 +200,21 @@ node npack(nodestyle ns=defaultpackstyle ... node[] nds) {
 }
 
 
-node hpack(align align=(0,0), real skip=defaultpackskip,
+node hpack(real h=-1, align align=(0,0), real skip=defaultpackskip,
        nodestyle ns=defaultpackstyle ... node[] nds) {
+    if (h>=0)
+        setheight(h ... nds);
     hlayout(skip ... nds);
     flush(align ... nds);
     return npack(ns ... nds);
 }
 
-node vpack(align align=(0,0), real skip=defaultpackskip,
+node vpack(real w=-1, align align=(0,0), real skip=defaultpackskip,
         nodestyle ns=defaultpackstyle ... node[] nds) {
+    if (w>=0)
+        setwidth(w ... nds);
     vlayout(skip ... nds);
     flush(align ... nds);
     return npack(ns ... nds);
-}
-
-// middle
-
-node middle(... node[] nds) {
-    boundbox bb=bb(nds);
-    node nd;
-    nd.pos = (bb.m+bb.M)/2;
-    return nd;
 }
 

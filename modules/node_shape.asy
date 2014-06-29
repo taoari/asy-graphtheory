@@ -86,6 +86,21 @@ node[] nboxes(nodestyle ns=defaultnodestyle ... Label[] Ls) {
     return nds;
 }
 
+node[] nboxes(nodestyle[] nss ... Label[] Ls) {
+    if (nss.length==0)
+        return nboxes(... Ls);
+    else if (nss.length==1)
+        return nboxes(nss[0] ... Ls);
+    else if(nss.length!=Ls.length)
+        abort("nboxes: nodestyles, Labels length do not match");
+    node[] nds;
+    for (int i=0; i<Ls.length; ++i) {
+        nds.push(nbox(Ls[i], nss[i]));
+    }
+    return nds;
+}
+
+
 // text : string 1d, 2d array to node array
 node node(Label L, nodestyle ns=defaultnodestyle) {
     nodestyle ns2 = copy(ns);

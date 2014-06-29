@@ -7,7 +7,7 @@ defaultdrawstyle=drawstyle(p=fontsize(8pt)+fontcommand("\ttfamily"), arrow=Arrow
 // define nodes
 node start=nroundbox("Start"),
      read=nparallelogram("Read N"),
-     b1=nbox(minipage("M=1\\ F=1",1cm)),
+     b1=nbox(minipage2("M=1\\ F=1")),
      b2=nbox("F=F*M"),
      d1=ndiamond("Is M=N?"),
      b3=nbox("M=M+1"),

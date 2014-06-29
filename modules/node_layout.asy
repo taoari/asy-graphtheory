@@ -162,3 +162,44 @@ node circularlayout(real radius, pair center=(0,0), real startangle=0, real angl
         node[] nds) {
     return circularlayout(radius, center, startangle, angleskip, nds);
 }
+
+/////////////////////////////////////////////
+// center layout
+/////////////////////////////////////////////
+
+// center layout
+node centerlayout(pair dir, node ref=new node, 
+        real skip=defaultlayoutskip, bool rel=defaultlayoutrel, node[] nds) {
+    layout(dir, skip, rel, nds);
+    pair c = (point(nds[0],-dir)+point(nds[nds.length-1],dir))/2;
+    pair d = ref.pos - c;
+    for (node nd: nds) {
+        nd.pos += d;
+    }
+    return ref;
+}
+
+node centerlayout(pair dir, node ref=new node, 
+        real skip=defaultlayoutskip, bool rel=defaultlayoutrel ... node[] nds) {
+    return centerlayout(dir, ref, skip, rel, nds);
+}
+
+node hcenterlayout(node ref=new node, 
+        real skip=defaultlayoutskip, bool rel=defaultlayoutrel, node[] nds) {
+    return centerlayout(E, ref, skip, rel, nds);
+}
+
+node hcenterlayout(node ref=new node, 
+        real skip=defaultlayoutskip, bool rel=defaultlayoutrel ... node[] nds) {
+    return centerlayout(E, ref, skip, rel, nds);
+}
+
+node vcenterlayout(node ref=new node, 
+        real skip=defaultlayoutskip, bool rel=defaultlayoutrel, node[] nds) {
+    return centerlayout(S, ref, skip, rel, nds);
+}
+
+node vcenterlayout(node ref=new node, 
+        real skip=defaultlayoutskip, bool rel=defaultlayoutrel ... node[] nds) {
+    return centerlayout(S, ref, skip, rel, nds);
+}
