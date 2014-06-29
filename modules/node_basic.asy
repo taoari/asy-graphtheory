@@ -1,129 +1,120 @@
+////////////////////////////////////
 // struct node
-struct node{
-  // real outline is: shift(pos)*outline, 
-  path outline=(0,0)--cycle; // outline: should be centered around (0,0)
-  picture stuff=new picture; // stuff
-  pair pos=(0,0); // position
+// design principle: outline and pos is used for layout and positioning
+//      all things are drawn in stuff
+//      outline is centered at (0,0), when draw, use shift(pos)*stuff
+struct node {
+    path outline = (0,0)--cycle;
+    picture stuff = new picture;
+    pair pos = (0,0);
 
-  // for dock
-  bool docked=false;
-  node [] sub=new node[];
-  pair relpos=(0,0);
-
-  void operator init(path outline=(0,0)--cycle, picture stuff=new picture,
-      pair pos=(0,0))
-  {
-    this.outline=outline;
-    this.pos=pos;
-    this.stuff = stuff;
-  }
-  // position of node at modified direction v
-  pair point(pair v)
-  {
-    pair c=pos;
-    path g=shift(pos)*outline;
-    pair M=max(g), 
-	 m=min(g),
-	 D=M-m;
-    path ray=c--c+length(M-m)*unit((D.x*v.x,D.y*v.y));
-    return intersectionpoint(g,ray);
-  }
-  // position of node at direction v
-  pair dir(pair v)
-  {
-    pair c=pos;
-    path g=shift(pos)*outline;
-    pair M=max(g), 
-	 m=min(g);
-    path ray=c--c+length(M-m)*unit(v);
-    return intersectionpoint(g,ray);
-  }
-  // position of node at degree v
-  pair angle(real deg)
-  {
-    return this.dir(dir(deg));
-  }
+    void operator init(path outline=(0,0)--cycle, 
+            picture stuff=new picture,
+            pair pos=(0,0)) {
+        this.outline = outline;
+        this.pos = pos;
+        this.stuff = stuff;
+    }
+    //////////////////////////// 
+    // begin obsolted
+    // for dock
+    bool docked=false;
+    node [] sub=new node[];
+    pair relpos=(0,0);
+    // position of node at modified direction v
+    pair point(pair v)
+    {
+        pair c=pos;
+        path g=shift(pos)*outline;
+        pair M=max(g), 
+             m=min(g),
+             D=M-m;
+        path ray=c--c+length(M-m)*unit((D.x*v.x,D.y*v.y));
+        return intersectionpoint(g,ray);
+    }
+    // position of node at direction v
+    pair dir(pair v)
+    {
+        pair c=pos;
+        path g=shift(pos)*outline;
+        pair M=max(g), 
+             m=min(g);
+        path ray=c--c+length(M-m)*unit(v);
+        return intersectionpoint(g,ray);
+    }
+    // position of node at degree v
+    pair angle(real deg)
+    {
+        return this.dir(dir(deg));
+    }
+    // end obsoleted
+    //////////////////////////////
 };
 
-node copy(node nd)
-{
-  node cp;
-  cp.outline=nd.outline;
-  cp.pos=nd.pos;
-  cp.stuff=nd.stuff.copy();
-  return cp;
-}
-// basic operations
-pair operator^(node nd, pair v)
-{
-  return nd.point(v);
+// create a copy
+node copy(node nd) {
+    node cp;
+    cp.outline=nd.outline;
+    cp.pos=nd.pos;
+    cp.stuff=nd.stuff.copy();
+    return cp;
 }
 
-node operator+(node nd, pair shift)
-{
-  nd.pos+=shift;
-  return nd;
+// point position at modified direction v
+pair operator^(node nd, pair v) {
+    pair c=nd.pos;
+    path g=shift(nd.pos)*nd.outline;
+    pair M=max(g), 
+         m=min(g),
+         D=M-m;
+    // path ray=c--c+length(M-m)*unit(v) // abs direction v
+    path ray=c--c+length(M-m)*unit((D.x*v.x,D.y*v.y));
+    return intersectionpoint(g,ray);
 }
 
-node operator-(node nd, pair shift)
-{
-  nd.pos-=shift;
-  return nd;
+// point position at direction v
+pair point(node nd, pair v) {
+    pair c=nd.pos;
+    path g=shift(nd.pos)*nd.outline;
+    pair M=max(g), 
+         m=min(g),
+         D=M-m;
+    path ray=c--c+length(M-m)*unit(v);
+    return intersectionpoint(g,ray);
 }
 
-pair position(node nd)
-{
-  return nd.pos;
-}
-// interp(pos) and middle(pos)
-pair interppos(node nd1, node nd2, real t, bool rel=true)
-{
-  if (rel==false)
-    return (1-t)*nd1.pos+t*nd2.pos;
-  else
-  {
-    pair D=nd2.pos-nd1.pos;
-    return (1-t)*nd1.dir(D)+t*nd2.dir(-D);
-  }	
+// node place holder
+node interp(node nd1, node nd2, real t, bool rel=true) {
+    node nd;
+    if (rel == false) {
+        nd.pos = (1-t)*nd1.pos + t*nd2.pos;
+    } else {
+        pair D = nd2.pos-nd1.pos;
+        nd.pos = (1-t)*point(nd1,D) + t*point(nd2,-D);
+    }
+    return nd;
 }
 
-node interp(node nd1, node nd2, real t, bool rel=true)
-{
-  node nd;
-  nd.pos= interppos(nd1, nd2, t, rel);
-  return nd;
+node middle(node nd1, node nd2, bool rel=true) {
+    return interp(nd1, nd2, 0.5, rel);
 }
 
-pair middlepos(node nd1, node nd2, bool rel=true)
-{
-  return interppos(nd1, nd2, 0.5, rel);
-}
-
-node middle(node nd1, node nd2, bool rel=true)
-{
-  return interp(nd1, nd2, 0.5, rel);
-}
 
 // drawing nodes
-// drawing node array
 void draw(picture pic=currentpicture, node[] nodearr)
 {
-  for (node nd: nodearr)
-    add(pic, shift(nd.pos)*nd.stuff);
-}
-// drawing one or more nodes
-void draw(picture pic=currentpicture ... node[] nodearr)
-{
-  draw(pic, nodearr);
+    for (node nd: nodearr)
+        add(pic, shift(nd.pos)*nd.stuff);
 }
 
-void display(picture pic=currentpicture ... node[] nds)
+void draw(picture pic=currentpicture ... node[] nodearr)
 {
-  int n=nds.length;
-  for (int i=0; i<n; ++i)
-  {
-    real t=i/n*360;
-    draw(pic,shift(nds[i].pos)*nds[i].outline,hsv(t,1,1));
-    dot(pic,string(i),nds[i].pos, hsv(t,1,1));
-  }
+    draw(pic, nodearr);
+}
+
+void draw(picture pic=currentpicture, node[][] nds2d)
+{
+    for (node[] nds: nds2d)
+        for (node nd: nds)
+            add(pic, shift(nd.pos)*nd.stuff);
 }

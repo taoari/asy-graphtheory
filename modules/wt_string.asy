@@ -29,7 +29,7 @@ pair getminipagesize(string s)
 
 real defaulttextheight=gettextheight("e");
 
-string minipage2(string s, real width=100bp, bool smart=true, align flush=(0,0))
+string minipage2(string s, real width=100pt, bool smart=true, align flush=(0,0))
 {
   if (smart)
   {

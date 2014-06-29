@@ -5,24 +5,21 @@ defaultnodestyle=nodestyle(drawfn=FillDrawer(lightgray,black));
 defaultdrawstyle=drawstyle(p=fontsize(8pt)+fontcommand("\ttfamily"));
 
 // define nodes
-node q0=scircle(".tex");
-node q1=scircle(".dvi");
-node q2=scircle(".pdf");
-node q3=scircle(".ps ");
+node[] n = ncircles(".tex", ".dvi", ".pdf", ".ps");
 
-// calc position
-real u=5cm;
-real v=3cm;
-q0<<edown(v)<<q1<<eright(u)<<q3<<eup(v)<<q2;
+// layout
+defaultlayoutrel=false;
+gridlayout((2,2), (5cm, 3cm), n);
 
 // draw nodes
-draw(q0,q1,q2,q3);
+draw(n);
 
 // draw edges
-draw((q0--q1).l("latex"), 
-    (q0--q2).l("pdflatex"),
-    (q0--q2).l("xelatex").style("leftside"),
-    (q1--q3).l("dvips"),
-    (q3--q2).l("ps2pdf"),
-    (q1--q2).l("dvipdfmx")
-);
+draw(
+        (n[0]--n[1]).l("latex"), 
+        (n[0]--n[2]).l("pdflatex"),
+        (n[0]--n[2]).l("xelatex").style("leftside"),
+        (n[1]--n[3]).l("dvips"),
+        (n[3]--n[2]).l("ps2pdf"),
+        (n[1]--n[2]).l("dvipdfmx")
+    );

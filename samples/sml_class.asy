@@ -1,15 +1,4 @@
-import nodebox;
-
-// define sml_class
-node sml_class(string name="", string id="", string attribs="", string opers="")
-{
-  if (id!="")
-    name="{\scriptsize $<<$"+id+"$>>$}\par {\bfseries "+name+"}";
-  else
-    name="\bfseries "+name;
-  nodestyle boxstyle=nodestyle(xmargin=0.2cm, ymargin=0.15cm);
-  return vbox(new nodestyle[]{boxstyle}, minipage2(name), attribs, opers);
-}
+import nodesml;
 
 // define nodes
 node record=sml_class("Record", "type");
@@ -20,14 +9,16 @@ node comph=sml_class("CompositeHandler","","-hdset: DataHandler[]", "+PushData(f
 node dbi=sml_class("DataBaseImp");
 node cfi=sml_class("CsvFileImp");
 
-// dock, flush and draw nodes
-node c1=hdock(1cm, dbi, cfi);
-node c2=vdock(2cm, centerat=0, storeh, c1);
-node c3=hdock(6cm, flush=N, rel=false, c2, checkh, comph);
-node c4=hdock(4cm, centerat=1, record, datah);
-node cc=vdock(2cm, c4, c3) @ refresh;
+// layout
+hlayout(1cm, dbi, cfi);
+vlayout(-2cm, middle(dbi, cfi), storeh);
+hlayout(2cm, storeh, checkh, comph);
+flush(N, storeh, checkh, comph);
+vlayout(-3cm, middle(storeh, checkh, comph), datah);
+hlayout(-1cm, datah, record);
 flush(W, dbi, record);
-cc @ deepdraw;
+
+draw(dbi, cfi, storeh, checkh, comph, datah, record);
 
 // draw edges
 drawstyle es2=drawstyle(p=dashed+fontcommand("\ttfamily"), Arrow(SimpleHead));
