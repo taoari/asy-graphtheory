@@ -53,6 +53,10 @@ struct edge{
 	  marker, lp, embed, filltype, s);
     return this;
   }
+  edge shorten(real pre=0, real post=2) {
+    this.g=subpath(this.g, arctime(this.g,pre), arctime(this.g, arclength(this.g)-post));
+    return this;
+  }
 };
 
 // draw

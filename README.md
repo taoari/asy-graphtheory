@@ -6,13 +6,18 @@ Introduction
 
 node.asy is not only easy to use, but also with great extensibility. can draw graph theory, automata, flowchart, circuit-like graphics
 
-What's New (4.0)
+What's New (5.0)
 ================
 
-Draw graph theory graph using adj matrix syntax
+**Note**: v5.0 is **not** compatible with v4.0, with the new **layout** syntax replacing the old dock syntax
 
-![graphmatrep](samples/graphmatrep.png)
-[view source](samples/graphmatrep.asy)
+Scientific Publication:
+
+![surf-scalespace](samples/surf-scalespace.png)
+[view source](samples/surf-scalespace.asy)
+
+![gabor](samples/gabor.png)
+[view source](samples/gabor.asy)
 
 
 Gallery
@@ -23,15 +28,6 @@ Automata:
 
 ![automata](samples/automata.png)
 [view source](samples/automata.asy)
-
-Boxes:
-------
-
-![boxes](samples/boxes.png)
-[view source](samples/boxes.asy)
-
-![boxes](samples/boxes2.png)
-[view source](samples/boxes2.asy)
 
 Flow Chart:
 -----------
@@ -48,40 +44,78 @@ Graph Illustration:
 Graph Theory:
 --------------
 
+![graphtheory](samples/graphtheory.png)
+[view source](samples/graphtheory.asy)
+
+### Graph Matrix Representation
+
 ![graphmatrep](samples/graphmatrep.png)
 [view source](samples/graphmatrep.asy)
 
-![graphtheory](samples/graphtheory.png)
-[view source](samples/graphtheory.asy)
+Boxes:
+------
+
+![boxes](samples/boxes.png)
+[view source](samples/boxes.asy)
+
+### Fancy Box
+
+![boxes](samples/boxes2.png)
+[view source](samples/boxes2.asy)
+
+Scientific Publication:
+----------------------
+
+### Text Grid Layout
+
+![surf-scalespace](samples/surf-scalespace.png)
+[view source](samples/surf-scalespace.asy)
+
+### Image Node
+
+![gabor](samples/gabor.png)
+[view source](samples/gabor.asy)
+
 
 SML:
 ----
 
-### Hello SML
+### SML Hello
 
-![hellosml](samples/hellosml.png)
-[view source](samples/hellosml.asy)
+![hellosml](samples/sml_hello.png)
+[view source](samples/sml_hello.asy)
 
-### Component
+### SML Component
 
-![component](samples/component.png)
-[view source](samples/component.asy)
+![component](samples/sml_component.png)
+[view source](samples/sml_component.asy)
 
 ### SML Class
 
-![smlclass](samples/smlclass.png)
-[view source](samples/smlclass.asy)
+![smlclass](samples/sml_class.png)
+[view source](samples/sml_class.asy)
 
 ### SML Lead
 
-![smllead](samples/smllead.png)
-[view source](samples/smllead.asy)
+![smllead](samples/sml_lead.png)
+[view source](samples/sml_lead.asy)
 
 Circuit:
 --------
 
 ![circuit](samples/circuit.png)
 [view source](samples/circuit.asy)
+
+What's New 
+==========
+
+4.0
+---
+
+Draw graph theory graph using adj matrix syntax
+
+![graphmatrep](samples/graphmatrep.png)
+[view source](samples/graphmatrep.asy)
 
 
 Links

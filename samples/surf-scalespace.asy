@@ -32,5 +32,5 @@ draw(n);
 draw(
         (r1--r2).l("nOctaves (o)").style("autorot").style("leftside"),
         (c1--c2).l("nOctavesLayers (i)").style("autorot"),
-        (n[1][1]--n[1][2]).l("double").style(es2)
+        (n[1][1]--n[1][2]).l("double").style(es2).shorten(5,5)
     );
