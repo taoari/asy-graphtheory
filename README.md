@@ -23,6 +23,8 @@ Scientific Publication:
 Gallery
 =======
 
+The usage of this library is described [here](Usage.md), or you can just view the source codes of samples to figure out what they mean, they are quite self-explanatory!
+
 Automata:
 ---------
 

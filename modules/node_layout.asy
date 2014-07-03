@@ -1,3 +1,5 @@
+node nodeph; // place holder
+
 bool defaultlayoutrel = true;
 real defaultlayoutskip = 1cm;
 

@@ -11,13 +11,10 @@ node c=nellipse("Design In UML");
 node c1=nellipse("Code in asy");
 node c2=nellipse("Compile asy");
 
-node n;
-
 // layout
 real u=1cm, v=5cm;
-layout(-45.0, v, a, c, n);
-hlayout(-u, n, c1);
-hlayout(u, n, c2);
+layout(-45.0, v, a, c, nodeph);
+hcenterlayout(nodeph, u, c1, c2);
 
 // draw nodes
 draw(a, c, c1, c2);
