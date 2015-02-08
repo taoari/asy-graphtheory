@@ -1,0 +1,1250 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+\date{}
+
+\usepackage{xcolor}
+\usepackage{hyperref}
+\end_preamble
+\options 12pt
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3.17cm
+\topmargin 2.54cm
+\rightmargin 3.17cm
+\bottommargin 2.54cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0bp
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\color green
+Asymptote node.asy Example
+\end_layout
+
+\begin_layout Author
+Tao Wei
+\begin_inset Newline newline
+\end_inset
+
+taowei@buffalo.edu
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% 
+\backslash
+usepackage{xcolor} % required by asy.tex
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+input{asy.tex}  
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+lstset{language=asy, style=lesscolor}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction 
+\end_layout
+
+\begin_layout Standard
+node.asy is not only easy to use, but also with great extensibility.
+ can draw graph theory, automata, flowchart, circuit-like graphics
+\end_layout
+
+\begin_layout Section
+Gallery
+\end_layout
+
+\begin_layout Subsection
+Automata
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename samples/automata.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "samples/automata.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Flow Chart
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename samples/flowchart.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "samples/flowchart.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Graph Illustration
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename samples/graphillustra.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "samples/graphillustra.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Graph Theory
+\end_layout
+
+\begin_layout Subsubsection
+Simple Graph Theory
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename samples/graphtheory.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "samples/graphtheory.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Graph Matrix Representation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename samples/graphmatrep.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "samples/graphmatrep.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Boxes
+\end_layout
+
+\begin_layout Subsubsection
+Simple Boxes
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename samples/boxes.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "samples/boxes.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Fancy Boxes
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename samples/boxes2.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "samples/boxes2.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Scientific Publication
+\end_layout
+
+\begin_layout Subsubsection
+Text Annotation
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename samples/surf-scalespace.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "samples/surf-scalespace.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Image Node
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename samples/gabor.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "samples/gabor.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+SML
+\end_layout
+
+\begin_layout Subsubsection
+SML Hello
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename samples/sml_hello.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "samples/sml_hello.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+SML Component
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename samples/sml_component.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "samples/sml_component.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+SML Class
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename samples/sml_class.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "samples/sml_class.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+SML Lead
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename samples/sml_lead.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "samples/sml_lead.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Circuit
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename samples/circuit.pdf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand lstinputlisting
+filename "samples/circuit.asy"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Usage
+\end_layout
+
+\begin_layout Standard
+A typical use of this library involves 4 steps:
+\end_layout
+
+\begin_layout Enumerate
+define node and edge styles
+\end_layout
+
+\begin_layout Enumerate
+define nodes
+\end_layout
+
+\begin_layout Enumerate
+layout and draw nodes
+\end_layout
+
+\begin_layout Enumerate
+draw edges
+\end_layout
+
+\begin_layout Subsection
+define node and edge styles
+\end_layout
+
+\begin_layout Standard
+this step can be ignored if the default black-white style satisfies you,
+ or a single line if you want edges to have arrows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+defaultdrawstyle=drawstyle(Arrow);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+there are two global variables to control the default node style and edge
+ style, you can overwrite them to satisfy your own needs:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+defaultnodestyle=nodestyle(drawfn=FillDrawer(lightgray,black));
+\end_layout
+
+\begin_layout Plain Layout
+
+defaultdrawstyle=drawstyle(p=fontsize(8pt)+fontcommand("
+\backslash
+ttfamily"), arrow=Arrow(6));
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+you can define your own styles if you want multiple styles:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+defaultnodestyle=nodestyle(textpen=white, drawfn=FillDrawer(darkgreen,black));
+\end_layout
+
+\begin_layout Plain Layout
+
+nodestyle ns2=nodestyle(textpen=white, drawfn=Filler(darkgreen)+DoubleDrawer(bla
+ck));
+\end_layout
+
+\begin_layout Plain Layout
+
+nodestyle ns3=nodestyle(drawfn=None);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+define nodes
+\end_layout
+
+\begin_layout Standard
+shaped nodes, (nbox can be ncircle, nellipse, nroundbox, ndiamond, nparallelogra
+m)
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+node n0 = nbox("$n_0$");
+\end_layout
+
+\begin_layout Plain Layout
+
+node n1 = ncircle("$n_1$", ns2);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+or multiple nodes of the same shape and style (nboxes, ..., nparallelograms)
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+node[] n = nboxes("$n_0$", "$n_1$", "$n_2$", "$n_3$", "$n_4$");
+\end_layout
+
+\begin_layout Plain Layout
+
+node[] n = ncircles(ns2, "$n_0$", "$n_1$", "$n_2$", "$n_3$", "$n_4$");
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+text nodes (node)
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+node n0 = node("$n_0$");
+\end_layout
+
+\begin_layout Plain Layout
+
+node[] n = node("$n_0$", "$n_1$", "$n_2$", "$n_3$", "$n_4$");
+\end_layout
+
+\begin_layout Plain Layout
+
+Label[][] strs = {
+\end_layout
+
+\begin_layout Plain Layout
+
+{"$a_{0,0}$", "$
+\backslash
+cdots$", "$a_{0,n}$"},
+\end_layout
+
+\begin_layout Plain Layout
+
+{"$
+\backslash
+vdots$", "$
+\backslash
+ddots$", "$
+\backslash
+vdots$"},
+\end_layout
+
+\begin_layout Plain Layout
+
+{"$a_{m,0}$", "$
+\backslash
+cdots$", "$a_{m,n}$"}};
+\end_layout
+
+\begin_layout Plain Layout
+
+node[][] n2d = node(strs);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+node resize (setsize, setwidth, setheight):
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+setwidth(...
+ nds); // automatically set to the largest width
+\end_layout
+
+\begin_layout Plain Layout
+
+setwidth(w=width ...
+ nds); // set width to "w", if w=0, automatically
+\end_layout
+
+\begin_layout Plain Layout
+
+setheight(h ...
+ nds);
+\end_layout
+
+\begin_layout Plain Layout
+
+setsize((w,h) ...
+ nds);
+\end_layout
+
+\begin_layout Plain Layout
+
+// set nds total width to 10cm, with ratios of 5:1:2
+\end_layout
+
+\begin_layout Plain Layout
+
+setwidth(10cm, new real[]{5,1,2} ...
+ nds);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+compound nodes (npack, hpack, vpack), nodes can be firsted resized, and
+ then layouted before packing:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+hpack(h=-1 ...
+ nds); // do not reisze nodes
+\end_layout
+
+\begin_layout Plain Layout
+
+hpack(h=0 ...
+ nds); // nodes are set to same height
+\end_layout
+
+\begin_layout Plain Layout
+
+hpack(h=height, ...
+ nds); // nodes are set to "height" (positive)
+\end_layout
+
+\begin_layout Plain Layout
+
+vpack(w=<-1, 0 or width> ...
+ nds)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+symbol nodes, please refer to nodecircuit, and nodesml.
+\end_layout
+
+\begin_layout Subsection
+layout nodes
+\end_layout
+
+\begin_layout Standard
+two global variables to control the layout properties
+\end_layout
+
+\begin_layout Itemize
+relative layout: layout according to the outline of nodes
+\end_layout
+
+\begin_layout Itemize
+absolute layout: layout accordng to the position of nodes
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+defaultlayoutrel = true; // relative layout
+\end_layout
+
+\begin_layout Plain Layout
+
+defaultlayoutskip = 1cm; // nodes skip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+layouts (there is a global node "nodeph" as a place holder):
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+layout(dir ...
+ nds);
+\end_layout
+
+\begin_layout Plain Layout
+
+hlayout(...
+ nds);
+\end_layout
+
+\begin_layout Plain Layout
+
+vlayout(...
+ nds);
+\end_layout
+
+\begin_layout Plain Layout
+
+gridlayout((rownum, colum) ...
+ nds);
+\end_layout
+
+\begin_layout Plain Layout
+
+gridlayout(nds2d);
+\end_layout
+
+\begin_layout Plain Layout
+
+circularlayout(...
+ nds);
+\end_layout
+
+\begin_layout Plain Layout
+
+centerlayout(dir, refnode ...
+ nds);
+\end_layout
+
+\begin_layout Plain Layout
+
+hcenterlayout(refnode ...
+ nds);
+\end_layout
+
+\begin_layout Plain Layout
+
+vcenterlayout(refnode ...
+ nds);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+set to absolute positions:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+setpos(nds, positions);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+flush:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+flush(align ...
+ nds); // align can be N, S, E, W
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+layout APIs reference:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+layout(dir, skip, rel ...
+ nds);
+\end_layout
+
+\begin_layout Plain Layout
+
+hlayout(skip, rel ...
+ nds);
+\end_layout
+
+\begin_layout Plain Layout
+
+vlayout(skip, rel ...
+ nds);
+\end_layout
+
+\begin_layout Plain Layout
+
+gridlayout((rownum, colnum), roworder, (xskip, yskip), rel ...
+ nds);
+\end_layout
+
+\begin_layout Plain Layout
+
+circularlayout(radius, center, startangle, angleskip ...
+ nds);
+\end_layout
+
+\begin_layout Plain Layout
+
+centerlayout(dir, refnode, skip, rel ...
+ nds);
+\end_layout
+
+\begin_layout Plain Layout
+
+hcenterlayout(refnode, skip, rel ...
+ nds);
+\end_layout
+
+\begin_layout Plain Layout
+
+vcenterlayout(refnode, skip, rel ...
+ nds);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+draw nodes
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+draw(...
+ nds);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+draw edges
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+draw(
+\end_layout
+
+\begin_layout Plain Layout
+
+	(n1--n2),
+\end_layout
+
+\begin_layout Plain Layout
+
+	(n1..n2),
+\end_layout
+
+\begin_layout Plain Layout
+
+	(n1..loop(N)),
+\end_layout
+
+\begin_layout Plain Layout
+
+	(n1..bend..n2),
+\end_layout
+
+\begin_layout Plain Layout
+
+	(n1--n2).l("label"),
+\end_layout
+
+\begin_layout Plain Layout
+
+	(n1--n2).l("label").style(es2),
+\end_layout
+
+\begin_layout Plain Layout
+
+	(n1--n2).l("label").style("autorot"),
+\end_layout
+
+\begin_layout Plain Layout
+
+	(n1--n2).l("label").style("leftside"),
+\end_layout
+
+\begin_layout Plain Layout
+
+	(n1--n2).l("label").shorten(5,5)
+\end_layout
+
+\begin_layout Plain Layout
+
+);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
